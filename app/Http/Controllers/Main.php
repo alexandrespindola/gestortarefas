@@ -11,4 +11,18 @@ class Main extends Controller
     {
         echo "Gestor de Tarefas";
     }
+
+    public function login()
+    {
+        $data = [
+            'title' => 'Login'
+        ];
+
+        return view('login_form', $data);
+    }
+
+    public function login_submit()
+    {
+        echo "Login submit";
+    }
 }

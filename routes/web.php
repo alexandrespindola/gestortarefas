@@ -22,5 +22,9 @@ Route::get('/', function () {
 
 Route::get('/', [Main::class, 'index'])->name('index');
 
+// login route
+Route::get('/login', [Main::class, 'login'])->name('login');
+Route::post('/login_submit', [Main::class, 'login_submit'])->name('login_submit');
+
 
 ?>
