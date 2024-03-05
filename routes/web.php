@@ -17,16 +17,10 @@ use App\Http\Controllers\Main;
 
 Route::get('/', function () {
     
-    try {
-        DB::connection()->getPdo();
-        echo 'Conectado ao banco de dados com sucesso!' . DB::connection()->getDatabaseName();
-    } catch (\Exception $e) {
-        die('Não foi possível conectar ao banco de dados. Verifique sua conexão com a internet e tente novamente. Erro:' . $e->getMessage());
-        // 
-    }
 
 });
 
-Route::get('/main', [Main::class, 'index']);
+Route::get('/', [Main::class, 'index'])->name('index');
+
 
 ?>
