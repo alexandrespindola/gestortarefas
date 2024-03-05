@@ -25,4 +25,15 @@ class Main extends Controller
     {
         echo "Login submit";
     }
+
+    // main page
+    
+    public function main()
+    {
+        $data = [
+            'title' => 'Main'
+        ];
+
+        return view('main', $data);
+    }
 }

@@ -8,7 +8,11 @@
 </head>
 <body>
 
+    @include('templates/components/nav')
+
     @yield('content')
+
+    @include('templates/components/footer')
 
     <script src="{{ asset('assets/bootstrap/bootstrap.bundle.min.js')}}"></script>
 
