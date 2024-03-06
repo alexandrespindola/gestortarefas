@@ -17,6 +17,7 @@ class Main extends Controller
     {
         $data = [
             'title' => 'Gestor de Tarefas',
+            'datatables' => true,
             'tasks' => $this->getTasks()
         ];
 
