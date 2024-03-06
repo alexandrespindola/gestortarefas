@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col">
 
-                <div class="row align-items-center">
+                <div class="row align-items-center mb-3">
                     <div class="col">
                         <h4>Tarefas</h4>
                     </div>
@@ -17,12 +17,12 @@
 
                 </div>
 
-                @if ($tasks->count() > 0)
-                    <table id="table_tasks" class="table table-striped table-bordered">
+                @if (count($tasks) != 0)
+                    <table id="table_tasks" class="table table-striped table-bordered pt-2 w-100">
                         <thead class="table-dark">
                             <tr>
-                                <th class="w-50">Tarefa</th>
-                                <th class="w-25 text-center">Status</th>
+                                <th class="w-75">Tarefa</th>
+                                <th class="text-center">Status</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -44,10 +44,10 @@
                         data: 'task_name'
                     },
                     {
-                        data: 'task_status'
+                        data: 'task_status', className: 'text-center'
                     },
                     {
-                        data: 'id'
+                        data: 'task_actions', className: 'text-center',
                     },
                 ]
             });
